@@ -38,6 +38,8 @@ describe('Ingesting coverage', () => {
   const verboseArgs = [
     'scripts/ingest_coverage.js',
     '--verbose',
+    '--teamAssignmentsPath',
+    'src/dev/code_coverage/ingest_coverage/team_assignment/team_assignments.txt',
     '--vcsInfoPath',
     'src/dev/code_coverage/ingest_coverage/integration_tests/mocks/VCS_INFO.txt',
     '--path',
