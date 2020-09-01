@@ -13,9 +13,9 @@ kibanaPipeline(timeoutMinutes: 240) {
       workers.base(name: 'coverage-worker', size: 'l', ramDisk: false, bootstrapped: false) {
         catchError {
 //          kibanaTeamAssign.generateCodeOwners('.github/CODEOWNERS', "### Generate CODEOWNERS")
-//          kibanaCoverage.runTests()
-//          handleIngestion(TIME_STAMP)
-          kibanaTeamAssign.generateTeamAssignments("### Generate Team Assignments")
+          kibanaCoverage.runTests()
+          handleIngestion(TIME_STAMP)
+//          kibanaTeamAssign.generateTeamAssignments("### Generate Team Assignments")
         }
         handleFail()
       }
